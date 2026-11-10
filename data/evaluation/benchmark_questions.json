@@ -1,0 +1,200 @@
+[
+  {
+    "id": "Q01",
+    "question": "What is the elevation of Mount Hallasan, and what are the two trails that reach the Baeknokdam summit?",
+    "category": "fact_retrieval",
+    "topic": "Hallasan National Park",
+    "target_documents": ["01_hallasan_national_park.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "Mount Hallasan has an elevation of 1,947 meters (6,388 feet). The only two hiking routes that reach the Baeknokdam crater summit are the Seongpanak Trail (9.6 km) and the Gwaneumsa Trail (8.7 km).",
+    "key_entities": ["1,947", "Seongpanak", "Gwaneumsa", "Baeknokdam"]
+  },
+  {
+    "id": "Q02",
+    "question": "Do hikers need a reservation to climb to the summit of Mount Hallasan?",
+    "category": "fact_retrieval",
+    "topic": "Hallasan National Park",
+    "target_documents": ["01_hallasan_national_park.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "Yes, summit reservations are strictly mandatory for both the Seongpanak Trail and Gwaneumsa Trail through the official Hallasan Trail Reservation System.",
+    "key_entities": ["mandatory", "reservation", "Seongpanak", "Gwaneumsa"]
+  },
+  {
+    "id": "Q03",
+    "question": "What is the winter checkpoint cutoff time at Jindallaebat Shelter on the Seongpanak trail?",
+    "category": "fact_retrieval",
+    "topic": "Hallasan National Park",
+    "target_documents": ["01_hallasan_national_park.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "In winter, hikers must pass the Jindallaebat Shelter checkpoint before 12:00 PM (midday) to be permitted to continue to the summit.",
+    "key_entities": ["12:00 PM", "Jindallaebat", "winter"]
+  },
+  {
+    "id": "Q04",
+    "question": "How was Seongsan Ilchulbong formed, and what are its admission fees for adults?",
+    "category": "fact_retrieval",
+    "topic": "Seongsan Ilchulbong",
+    "target_documents": ["02_seongsan_ilchulbong_unesco.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "Seongsan Ilchulbong is a 182-meter hydrovolcanic tuff cone formed roughly 5,000 years ago by hydromagmatic eruptions in shallow coastal waters. The admission fee for adults (ages 25-64) is 5,000 KRW.",
+    "key_entities": ["hydrovolcanic tuff cone", "5,000 KRW", "182-meter", "crater"]
+  },
+  {
+    "id": "Q05",
+    "question": "When does the Haenyeo performance take place at Seongsan Ilchulbong?",
+    "category": "fact_retrieval",
+    "topic": "Seongsan Ilchulbong & Haenyeo",
+    "target_documents": ["02_seongsan_ilchulbong_unesco.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The Seongsan Haenyeo performance takes place twice daily at 13:30 and 15:00 at the rocky beach beneath the northern cliff (weather permitting).",
+    "key_entities": ["13:30", "15:00", "Haenyeo", "rocky beach"]
+  },
+  {
+    "id": "Q06",
+    "question": "What is the internal temperature of Manjanggul Lava Tube throughout the year, and what should visitors wear?",
+    "category": "fact_retrieval",
+    "topic": "Manjanggul Cave",
+    "target_documents": ["03_manjanggul_lava_tube.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The internal temperature remains between 11°C and 15°C (52°F-59°F) year-round. Visitors are advised to bring a warm windbreaker or light jacket and wear sturdy sneakers or walking shoes.",
+    "key_entities": ["11°C", "15°C", "windbreaker", "sturdy walking shoes"]
+  },
+  {
+    "id": "Q07",
+    "question": "How tall is the famous lava column inside Manjanggul Cave?",
+    "category": "fact_retrieval",
+    "topic": "Manjanggul Cave",
+    "target_documents": ["03_manjanggul_lava_tube.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The lava column inside Manjanggul Cave is 7.6 meters high, recognized as the largest known lava column in the world.",
+    "key_entities": ["7.6", "lava column", "largest"]
+  },
+  {
+    "id": "Q08",
+    "question": "Which beach on Jeju Island is especially recommended for families with young children and offers views of Biyangdo Island?",
+    "category": "fact_retrieval",
+    "topic": "Beaches",
+    "target_documents": ["04_jeju_beaches_and_coastal_wonders.txt"],
+    "ground_truth": "Hyeopjae Beach (along with Geumneung Beach) in Hallim-eup is famous for shallow cobalt waters, gentle slope, and scenic views of Biyangdo Island, making it ideal for families.",
+    "key_entities": ["Hyeopjae Beach", "Biyangdo", "shallow", "Hallim"]
+  },
+  {
+    "id": "Q09",
+    "question": "Why is Jungmun Saekdal Beach popular for surfing, and what safety precaution is emphasized for swimmers?",
+    "category": "fact_retrieval",
+    "topic": "Beaches",
+    "target_documents": ["04_jeju_beaches_and_coastal_wonders.txt"],
+    "ground_truth": "Jungmun Saekdal Beach has high rolling waves and strong swell, making it the top surfing destination in Korea. Swimmers are warned of powerful undertow currents and rip tides, requiring strict adherence to lifeguard flags.",
+    "key_entities": ["surfing", "undertow", "rip tides", "waves"]
+  },
+  {
+    "id": "Q10",
+    "question": "What are the official wayfinding markers used on the Jeju Olle Trail, and what do the ribbon colors represent?",
+    "category": "fact_retrieval",
+    "topic": "Jeju Olle Trail",
+    "target_documents": ["05_jeju_olle_trail_guide.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The wayfinding markers are the Ganse pony figure, painted directional arrows, and intertwined ribbons. The blue ribbon symbolizes the Jeju sea and the orange ribbon symbolizes Jeju tangerines.",
+    "key_entities": ["Ganse", "blue", "orange", "ribbons", "sea", "tangerines"]
+  },
+  {
+    "id": "Q11",
+    "question": "How many total routes and kilometers make up the Jeju Olle Trail network?",
+    "category": "fact_retrieval",
+    "topic": "Jeju Olle Trail",
+    "target_documents": ["05_jeju_olle_trail_guide.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The Jeju Olle Trail network comprises 27 official routes (21 main routes and 6 sub-routes) covering approximately 437 kilometers in total.",
+    "key_entities": ["27 routes", "437", "21 main", "6 sub-routes"]
+  },
+  {
+    "id": "Q12",
+    "question": "What is the function of the Red Express Buses in Jeju, and what are routes 101 and 102?",
+    "category": "fact_retrieval",
+    "topic": "Public Transportation",
+    "target_documents": ["06_public_transit_and_tourist_buses.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "Red Express Buses provide rapid intercity transit connecting Jeju Airport with Seogwipo and major transit hubs. Route 101 runs clockwise along the east coast and Route 102 runs counter-clockwise along the west coast.",
+    "key_entities": ["Red Express", "101", "102", "Airport", "Seogwipo"]
+  },
+  {
+    "id": "Q13",
+    "question": "What are the Yellow Tourist Shuttle Buses, and what areas do routes 810 and 820 cover?",
+    "category": "fact_retrieval",
+    "topic": "Public Transportation",
+    "target_documents": ["06_public_transit_and_tourist_buses.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "Yellow Tourist Shuttle Buses are dedicated loop buses with onboard guides. Route 810 covers eastern attractions (Geomunoreum, Bijarim) from Daecheon Transit Center, and Route 820 covers western attractions (Osulloc, Sanbangsan) from Donggwang Transit Center.",
+    "key_entities": ["Yellow Buses", "810", "820", "Daecheon", "Donggwang"]
+  },
+  {
+    "id": "Q14",
+    "question": "What traditional sauce is typically served with Jeju black pork, and how is it prepared?",
+    "category": "fact_retrieval",
+    "topic": "Gastronomy",
+    "target_documents": ["07_jeju_culinary_traditions_and_haenyeo.txt"],
+    "ground_truth": "Jeju black pork is traditionally served with Meljot, a rich salted anchovy dip simmered directly on the charcoal grill with fresh garlic and chili peppers.",
+    "key_entities": ["Meljot", "anchovy", "black pork", "charcoal"]
+  },
+  {
+    "id": "Q15",
+    "question": "What are the communal stone windbreaks called where Haenyeo divers gather, and what activities happen there?",
+    "category": "fact_retrieval",
+    "topic": "Haenyeo Culture",
+    "target_documents": ["07_jeju_culinary_traditions_and_haenyeo.txt"],
+    "ground_truth": "They are called Bulteok. Divers gather around campfires to warm up, check gear, teach younger divers, and establish sustainable harvest quotas.",
+    "key_entities": ["Bulteok", "warm", "gear", "quotas"]
+  },
+  {
+    "id": "Q16",
+    "question": "What is the 24/7 telephone number for the Korea Travel Helpline for foreign tourists in Jeju?",
+    "category": "fact_retrieval",
+    "topic": "Safety & Facilities",
+    "target_documents": ["08_traveler_safety_weather_and_facilities.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The 24/7 nationwide Korea Travel Helpline number is 1330, offering free tourist interpretation and guidance in Korean, English, Japanese, and Chinese.",
+    "key_entities": ["1330", "24/7", "interpretation", "free"]
+  },
+  {
+    "id": "Q17",
+    "question": "Which UNESCO World Natural Heritage sites on Jeju are mentioned in the tourism guide documents?",
+    "category": "multi_chunk_synthesis",
+    "topic": "UNESCO Heritage Synthesis",
+    "target_documents": ["01_hallasan_national_park.txt", "02_seongsan_ilchulbong_unesco.txt", "03_manjanggul_lava_tube.txt", "jeju_official_travel_guide_sample.pdf"],
+    "ground_truth": "The UNESCO World Natural Heritage property 'Jeju Volcanic Island and Lava Tubes' includes Mount Hallasan, Seongsan Ilchulbong tuff cone, and the Geomunoreum lava tube system including Manjanggul Cave.",
+    "key_entities": ["Hallasan", "Seongsan Ilchulbong", "Manjanggul", "UNESCO"]
+  },
+  {
+    "id": "Q18",
+    "question": "If a traveler wants to visit Seongsan Ilchulbong using public transit from Jeju Airport, which bus should they take?",
+    "category": "multi_chunk_synthesis",
+    "topic": "Transit and Sightseeing Synthesis",
+    "target_documents": ["06_public_transit_and_tourist_buses.txt", "02_seongsan_ilchulbong_unesco.txt"],
+    "ground_truth": "Travelers can board the Red Express Bus Route 101 from Jeju International Airport, which runs eastward along the coast through Hamdeok and Gimnyeong directly toward Seongsan.",
+    "key_entities": ["Route 101", "Express Bus", "Seongsan", "Airport"]
+  },
+  {
+    "id": "Q19",
+    "question": "What seasonal weather conditions in summer and winter should tourists prepare for when traveling to Jeju?",
+    "category": "multi_chunk_synthesis",
+    "topic": "Climate & Safety Synthesis",
+    "target_documents": ["08_traveler_safety_weather_and_facilities.txt", "01_hallasan_national_park.txt"],
+    "ground_truth": "In summer (June-August), tourists should prepare for heat, humidity (25-32°C), Jangma monsoons, and potential typhoons which can cancel ferries and trail access. In winter (December-February), temperatures are 3-10°C with harsh Siberian wind chill, and heavy snow on Hallasan requiring crampons.",
+    "key_entities": ["typhoon", "monsoon", "winter", "crampons", "wind chill"]
+  },
+  {
+    "id": "Q20",
+    "question": "What is the ticket price and schedule for the Paris Metro subway line 4?",
+    "category": "out_of_domain",
+    "topic": "Negative Control / Unanswerable",
+    "target_documents": [],
+    "ground_truth": "I am sorry, but the provided documents do not contain information about the Paris Metro or public transport in France. The available documents only cover Jeju Island tourism information.",
+    "key_entities": ["not contain", "unavailable", "Jeju Island"]
+  },
+  {
+    "id": "Q21",
+    "question": "Who is the current Prime Minister of the United Kingdom and what is their economic policy?",
+    "category": "out_of_domain",
+    "topic": "Negative Control / Unanswerable",
+    "target_documents": [],
+    "ground_truth": "I am sorry, but sufficient information is unavailable in the retrieved documents to answer this question. The provided knowledge base contains information solely concerning Jeju Island tourism.",
+    "key_entities": ["sufficient information is unavailable", "not contain"]
+  },
+  {
+    "id": "Q22",
+    "question": "What is the recommended recipe and baking time for traditional Italian sourdough pizza crust?",
+    "category": "out_of_domain",
+    "topic": "Negative Control / Unanswerable",
+    "target_documents": [],
+    "ground_truth": "I am sorry, but the provided Jeju tourism documents do not contain instructions or recipes for Italian sourdough pizza.",
+    "key_entities": ["do not contain", "unavailable"]
+  }
+]

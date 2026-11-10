@@ -1,0 +1,53 @@
+﻿Question_ID,Category,Topic,Question,Top_Similarity_Score,Precision@K,Recall@K,Faithfulness,Relevance,Correct_Handling,Retrieval_Time_sec,Generation_Time_sec,Total_Time_sec,Retrieved_Sources,Generated_Answer
+Q01,fact_retrieval,Hallasan National Park,"What is the elevation of Mount Hallasan, and what are the two trails that reach the Baeknokdam summit?",0.7507,1.0,1.0,0.9747,1.0,True,0.1508,0.0002,0.1511,01_hallasan_national_park.txt; jeju_official_travel_guide_sample.pdf,"Official Travel Guide: Highlights of Jeju Island
+Published by: Jeju Tourism Promotion Agency
+Document Ref: JTA-DOC-2026-ENG
+Coverage: Natural Heritage..."
+Q02,fact_retrieval,Hallasan National Park,Do hikers need a reservation to climb to the summit of Mount Hallasan?,0.6712,1.0,0.5,0.9677,1.0,True,0.0115,0.0001,0.0116,01_hallasan_national_park.txt,"Hiking Trails and Summit Access:
+Hallasan National Park features five official hiking routes, but only two routes provide access to the Baeknokdam cra..."
+Q03,fact_retrieval,Hallasan National Park,What is the winter checkpoint cutoff time at Jindallaebat Shelter on the Seongpanak trail?,0.6752,1.0,1.0,0.9695,1.0,True,0.0115,0.0001,0.0116,01_hallasan_national_park.txt; jeju_official_travel_guide_sample.pdf,"km, approximately 5 hours one-way). Both summit trails mandate prior online reservations through the official
+national park reservation portal to pres..."
+Q04,fact_retrieval,Seongsan Ilchulbong,"How was Seongsan Ilchulbong formed, and what are its admission fees for adults?",0.5291,1.0,0.5,0.9706,0.25,True,0.0123,0.0001,0.0124,02_seongsan_ilchulbong_unesco.txt,"Visiting Hours, Ticketing, and Admission:
+- Operating Hours:
+ - Summer Season (March to September): 07:00 to 20:00 (Ticket booth closes at 19:00).
+ - ..."
+Q05,fact_retrieval,Seongsan Ilchulbong & Haenyeo,When does the Haenyeo performance take place at Seongsan Ilchulbong?,0.6049,1.0,0.5,0.97,1.0,True,0.0117,0.0002,0.0119,02_seongsan_ilchulbong_unesco.txt,"Haenyeo Performance and Coastal Activities:
+- Below the northern cliff of the peak, the Seongsan Haenyeo Performance takes place twice daily at 13:30 ..."
+Q06,fact_retrieval,Manjanggul Cave,"What is the internal temperature of Manjanggul Lava Tube throughout the year, and what should visitors wear?",0.8019,1.0,1.0,0.969,1.0,True,0.0202,0.0001,0.0204,jeju_official_travel_guide_sample.pdf; 03_manjanggul_lava_tube.txt,"daily at 13:30 and 15:00.
+Located further northwest, Manjanggul Lava Tube features a 1.0 km section open to the public, showcasing the
+worlds largest ..."
+Q07,fact_retrieval,Manjanggul Cave,How tall is the famous lava column inside Manjanggul Cave?,0.733,1.0,1.0,0.9655,1.0,True,0.0114,0.0002,0.0116,jeju_official_travel_guide_sample.pdf; 03_manjanggul_lava_tube.txt,"Geological Background:
+Manjanggul Cave is one of the finest lava tunnels in the world and forms part of the renowned Geomunoreum Lava Tube System. For..."
+Q08,fact_retrieval,Beaches,Which beach on Jeju Island is especially recommended for families with young children and offers views of Biyangdo Island?,0.7705,1.0,1.0,0.9634,1.0,True,0.0121,0.0001,0.0122,04_jeju_beaches_and_coastal_wonders.txt,"1. Hyeopjae Beach & Geumneung Beach (Western Coast, Hallim-eup):
+ - Signature Features: Renowned for transparent cobalt water, shallow slope extending..."
+Q09,fact_retrieval,Beaches,"Why is Jungmun Saekdal Beach popular for surfing, and what safety precaution is emphasized for swimmers?",0.6846,1.0,1.0,0.9722,1.0,True,0.0116,0.0001,0.0117,04_jeju_beaches_and_coastal_wonders.txt,"3. Jungmun Saekdal Beach (Southern Coast, Seogwipo Jungmun Resort):
+ - Signature Features: Distinctive four-colored sands (black, white, red, and gray..."
+Q10,fact_retrieval,Jeju Olle Trail,"What are the official wayfinding markers used on the Jeju Olle Trail, and what do the ribbon colors represent?",0.8168,1.0,0.5,0.9752,0.1667,True,0.0107,0.0001,0.0108,05_jeju_olle_trail_guide.txt,"Trail Concept and Network:
+""Olle"" is a native Jeju dialect term referring to the narrow, winding stone path connecting a private house gate to the vil..."
+Q11,fact_retrieval,Jeju Olle Trail,How many total routes and kilometers make up the Jeju Olle Trail network?,0.7712,1.0,1.0,0.9664,1.0,True,0.0124,0.0002,0.0126,05_jeju_olle_trail_guide.txt; jeju_official_travel_guide_sample.pdf,"Trail Concept and Network:
+""Olle"" is a native Jeju dialect term referring to the narrow, winding stone path connecting a private house gate to the vil..."
+Q12,fact_retrieval,Public Transportation,"What is the function of the Red Express Buses in Jeju, and what are routes 101 and 102?",0.6917,1.0,1.0,0.9753,1.0,True,0.013,0.0002,0.0132,06_public_transit_and_tourist_buses.txt; jeju_official_travel_guide_sample.pdf,"Bus Categories and Color Codes:
+1. Red Buses (Express Buses / Geup-haeng):
+ - Function: Rapid transit linking Jeju International Airport, Jeju Interci..."
+Q13,fact_retrieval,Public Transportation,"What are the Yellow Tourist Shuttle Buses, and what areas do routes 810 and 820 cover?",0.592,1.0,1.0,0.9756,0.8,True,0.0118,0.0001,0.0119,06_public_transit_and_tourist_buses.txt; jeju_official_travel_guide_sample.pdf,"2. Blue Buses (Main Trunk Buses / Gan-seon):
+ - Function: Connect major commercial centers, universities, residential zones, and regional villages acr..."
+Q14,fact_retrieval,Gastronomy,"What traditional sauce is typically served with Jeju black pork, and how is it prepared?",0.715,1.0,1.0,0.9796,1.0,True,0.0108,0.0001,0.0109,07_jeju_culinary_traditions_and_haenyeo.txt,"Iconic Culinary Specialties of Jeju Island:
+1. Jeju Heukdwaeji (Jeju Black Pork):
+ - Features: Distinctive breed of domestic pig raised in Jeju's volc..."
+Q15,fact_retrieval,Haenyeo Culture,"What are the communal stone windbreaks called where Haenyeo divers gather, and what activities happen there?",0.6466,0.6667,1.0,0.9655,0.75,True,0.0114,0.0001,0.0115,02_seongsan_ilchulbong_unesco.txt; 07_jeju_culinary_traditions_and_haenyeo.txt,- Bulteok and Community Organization: Divers gather at stone windbreaks called Bulteok around communal campfires before and after harvesting to warm t...
+Q16,fact_retrieval,Safety & Facilities,What is the 24/7 telephone number for the Korea Travel Helpline for foreign tourists in Jeju?,0.7633,1.0,1.0,0.96,1.0,True,0.0127,0.0001,0.0129,jeju_official_travel_guide_sample.pdf; 08_traveler_safety_weather_and_facilities.txt,"Tourist Information Centers and Support Services:
+- Jeju Tourist Information Center (JTIC):
+ - Phone: 064-740-6000 (Open 09:00 to 18:00 daily).
+ - Lan..."
+Q17,multi_chunk_synthesis,UNESCO Heritage Synthesis,Which UNESCO World Natural Heritage sites on Jeju are mentioned in the tourism guide documents?,0.5946,0.6667,0.5,0.9623,0.75,True,0.0119,0.0001,0.012,02_seongsan_ilchulbong_unesco.txt; 04_jeju_beaches_and_coastal_wonders.txt; jeju_official_travel_guide_sample.pdf,"Official Travel Guide: Highlights of Jeju Island
+Published by: Jeju Tourism Promotion Agency
+Document Ref: JTA-DOC-2026-ENG
+Coverage: Natural Heritage..."
+Q18,multi_chunk_synthesis,Transit and Sightseeing Synthesis,"If a traveler wants to visit Seongsan Ilchulbong using public transit from Jeju Airport, which bus should they take?",0.7018,0.6667,0.5,0.9753,1.0,True,0.0126,0.0002,0.0128,06_public_transit_and_tourist_buses.txt; jeju_official_travel_guide_sample.pdf,"Bus Categories and Color Codes:
+1. Red Buses (Express Buses / Geup-haeng):
+ - Function: Rapid transit linking Jeju International Airport, Jeju Interci..."
+Q19,multi_chunk_synthesis,Climate & Safety Synthesis,What seasonal weather conditions in summer and winter should tourists prepare for when traveling to Jeju?,0.6934,1.0,0.5,0.97,0.2,True,0.0123,0.0001,0.0124,08_traveler_safety_weather_and_facilities.txt,"Climate and Weather Considerations:
+Jeju features a humid subtropical climate strongly influenced by maritime weather patterns and Mount Hallasan's to..."
+Q20,out_of_domain,Negative Control / Unanswerable,What is the ticket price and schedule for the Paris Metro subway line 4?,0.2906,1.0,1.0,1.0,0.6667,True,0.0108,0.0,0.0108,06_public_transit_and_tourist_buses.txt,"I am sorry, but sufficient information is unavailable in the retrieved tourism documents to answer this question. The current knowledge base contains ..."
+Q21,out_of_domain,Negative Control / Unanswerable,Who is the current Prime Minister of the United Kingdom and what is their economic policy?,0.0672,1.0,1.0,1.0,0.5,True,0.011,0.0,0.011,06_public_transit_and_tourist_buses.txt; 08_traveler_safety_weather_and_facilities.txt,"I am sorry, but sufficient information is unavailable in the retrieved tourism documents to answer this question. The current knowledge base contains ..."
+Q22,out_of_domain,Negative Control / Unanswerable,What is the recommended recipe and baking time for traditional Italian sourdough pizza crust?,0.2072,1.0,1.0,1.0,0.5,True,0.0105,0.0,0.0105,02_seongsan_ilchulbong_unesco.txt; 07_jeju_culinary_traditions_and_haenyeo.txt,"I am sorry, but sufficient information is unavailable in the retrieved tourism documents to answer this question. The current knowledge base contains ..."

@@ -1,0 +1,31 @@
+Title: Jeju Island Public Transportation, Express Routes, and Tourist Shuttles
+Source: Jeju Special Self-Governing Province Department of Transportation
+Access Date: 2026-10-15
+Category: Public Transit, Airport Connectivity & Tourist Shuttles
+
+Public Transit Reorganization Overview:
+Jeju operates an integrated, island-wide public bus transit system with uniform color-coded buses, fixed fare structures, and free transfer benefits. There is no passenger railway or subway system on Jeju Island.
+
+Bus Categories and Color Codes:
+1. Red Buses (Express Buses / Geup-haeng):
+   - Function: Rapid transit linking Jeju International Airport, Jeju Intercity Bus Terminal, Seogwipo, and major peripheral transit hubs with limited stops.
+   - Key Routes:
+     - Route 101: Coastal route running clockwise through Hamdeok, Gimnyeong, Seongsan, Pyoseon, and Seogwipo.
+     - Route 102: Coastal route running counter-clockwise through Aewol, Hallim, Gosan, Moseulpo, and Jungmun to Seogwipo.
+     - Routes 181 & 182: Fast transit corridors crossing the 5.16 and Pyeonghwa highway flanks of Hallasan, connecting northern Jeju City and southern Seogwipo in under 55 minutes.
+   - Fare: 2,000 KRW to 3,000 KRW (distance-tiered).
+2. Blue Buses (Main Trunk Buses / Gan-seon):
+   - Function: Connect major commercial centers, universities, residential zones, and regional villages across city boundaries. Standard fare: 1,200 KRW.
+3. Green Buses (Branch Buses / Ji-seon):
+   - Function: Feeder routes connecting rural villages, oreums (volcanic cones), and coastal trailheads to nearby regional bus centers. Standard fare: 1,200 KRW.
+4. Yellow Buses (Tourist Shuttle Buses / Gwangwang Sunhwan):
+   - Function: Dedicated tourist loop buses serving clusters of major attractions, museums, and natural sites.
+   - Route 810 (East Loop): Depots at Daecheon Transit Center, circling Geomunoreum, Abuoreum, Maze Land, Bijarim Forest, and Jeju Rail Bike.
+   - Route 820 (West Loop): Depots at Donggwang Transit Center, circling Osulloc Tea Museum, Shinhwa World, Aerospace Museum, and Sanbangsan.
+   - Onboard Tourist Guides (Domang-i): Uniformed guides provide live commentary on local history, geology, and bus connections.
+   - Day Pass: 3,000 KRW for unlimited daily rides on yellow loop buses.
+
+Transit Payment, Cards, and Transfer Discounts:
+- Payment Method: T-money, Cashbee, and major international credit cards with contactless EMV transit capabilities (e.g. Visa, Mastercard). Cash payments are also accepted at the driver's fare box.
+- Transfer Discount: Up to two free transfers within a 40-minute window from tagging off the previous bus.
+- Luggage Rules: Large suitcases over 28 inches or heavy backpacks must be stowed in the undercarriage luggage compartments on Express buses; city buses may limit bulky gear during peak commute hours.

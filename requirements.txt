@@ -1,0 +1,27 @@
+# Core RAG & Vector Database
+chromadb==0.5.23
+numpy<2.0.0
+sentence-transformers>=2.2.2
+torch>=2.0.0
+transformers>=4.36.0
+
+# LangChain Framework
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-core>=0.1.20
+langchain-text-splitters>=0.0.1
+
+# Document Processing & PDF Support
+pypdf>=4.0.0
+python-docx>=1.1.0
+reportlab>=4.0.0
+
+# Web Interface & Visualization
+streamlit>=1.30.0
+matplotlib>=3.8.0
+pandas>=2.1.0
+
+# Environment & Testing
+python-dotenv>=1.0.0
+pytest>=8.0.0
+python-pptx>=1.0.0
