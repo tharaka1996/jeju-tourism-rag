@@ -17,7 +17,7 @@ ENV/
 # vectorstore/ (uncomment if you want to exclude local ChromaDB files from git)
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 
 # Testing & Coverage
 .pytest_cache/
