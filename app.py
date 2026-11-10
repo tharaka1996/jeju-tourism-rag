@@ -66,8 +66,14 @@ st.markdown("""
 
 @st.cache_resource
 def get_vector_db():
-    """Cache vector database connection."""
-    return VectorDatabaseManager()
+    """Cache vector database connection and auto-index default corpus if empty."""
+    vdb = VectorDatabaseManager()
+    if vdb.collection.count() == 0:
+        loader = DocumentLoader()
+        docs = loader.load_directory(settings.DOCS_DIR)
+        if docs:
+            vdb.index_documents(docs, chunk_size=500, chunk_overlap=50)
+    return vdb
 
 
 @st.cache_resource
