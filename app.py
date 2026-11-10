@@ -119,8 +119,9 @@ st.sidebar.markdown("""
 """)
 
 # Initialize Pipeline
-rag_pipeline = get_rag_pipeline(llm_choice)
-vdb_manager = get_vector_db()
+with st.spinner("🏝️ Initializing Jeju Tourism AI Assistant & Loading Vector Database..."):
+    rag_pipeline = get_rag_pipeline(llm_choice)
+    vdb_manager = get_vector_db()
 
 # Navigation Tabs
 tabs = st.tabs([

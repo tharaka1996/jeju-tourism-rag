@@ -1,3 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # Core RAG & Vector Database
 chromadb==0.5.23
 pysqlite3-binary; sys_platform == 'linux'
