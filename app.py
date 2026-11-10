@@ -3,17 +3,26 @@ Jeju Tourism AI Assistant - Streamlit Web Application
 A comprehensive Retrieval-Augmented Generation (RAG) system for Jeju Island Tourism.
 Assignment 01 - Master of Management Information Systems (MIS), Jeju National University.
 """
+# Linux SQLite override for ChromaDB on Streamlit Cloud
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 import os
 import sys
 import time
 from pathlib import Path
-import streamlit as st
-import pandas as pd
 
 # Ensure project root is in sys.path
 BASE_DIR = Path(__file__).resolve().parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
+
+import streamlit as st
+import pandas as pd
 
 from config.settings import settings
 from src.document_loader import DocumentLoader

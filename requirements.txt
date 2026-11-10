@@ -1,5 +1,6 @@
 # Core RAG & Vector Database
 chromadb==0.5.23
+pysqlite3-binary; sys_platform == 'linux'
 numpy<2.0.0
 sentence-transformers>=2.2.2
 torch>=2.0.0

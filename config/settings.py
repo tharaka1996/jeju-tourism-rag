@@ -5,13 +5,16 @@ Loads environment variables from .env if present, otherwise provides reliable de
 import os
 from pathlib import Path
 from dataclasses import dataclass
-from dotenv import load_dotenv
 
 # Base Directory of the Project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load .env file if it exists
-load_dotenv(BASE_DIR / ".env")
+# Load .env file if it exists and python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BASE_DIR / ".env")
+except ImportError:
+    pass
 
 
 @dataclass
