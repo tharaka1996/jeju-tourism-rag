@@ -159,11 +159,25 @@ You must adhere strictly to the following grounding rules:
 
 ### 3.5 Streamlit Multi-Tab Web Application
 The user interface (`app.py`) provides 5 dedicated views:
-- **Dashboard & Architecture**: System status, vector counts, embedding parameters, and workflow diagrams.
+- **Dashboard & Architecture**: Real-time system status metrics (indexed documents count, total chunks, embedding dimensions), theoretical framework overview, and dataflow diagrams.
 - **Document Management**: File uploader (PDF/TXT), live preview, chunk configuration, and collection reset.
 - **AI Chat Assistant**: Natural language Q&A, interactive sample prompt buttons, latency badges, and expandable retrieved passages with similarity scores.
-- **Retrieval Inspector**: Direct query testing tool displaying raw chunk distances and ranking.
+- **Retrieval Inspector**: Direct query testing tool displaying raw chunk distances, cosine similarity scores, and ranking.
 - **Evaluation & Analytics**: Interactive benchmark runner, summary metrics cards, and embedded Matplotlib visualization charts.
+
+#### Live System Interface Captures:
+
+**Figure 2: Interactive Web Application Dashboard (Tab 1)**
+![Dashboard & Architecture](../reports/figures/screenshots/01_dashboard.png)
+
+**Figure 3: Document Management & Ingestion Interface (Tab 2)**
+![Document Management](../reports/figures/screenshots/02_document_management.png)
+
+**Figure 4: AI Chat Assistant with Grounded Citations (Tab 3)**
+![AI Chat Assistant](../reports/figures/screenshots/03_chat_assistant.png)
+
+**Figure 5: Vector Database Retrieval Inspector (Tab 4)**
+![Retrieval Inspector](../reports/figures/screenshots/04_retrieval_inspector.png)
 
 ---
 
@@ -212,9 +226,22 @@ The system was evaluated using four standard information retrieval and RAG metri
 | **Mean**| **Overall** | **All 22 Benchmark Items** | **0.6226** | **0.955** | **0.841** | **0.974** | **0.860** | **0.0185s** |
 
 ### 4.4 Analytical Graphs and Findings
-- **Retrieval Performance (Figure 1)**: In-domain retrieval achieved a mean **Precision@3 of 94.7%** and **Recall@3 of 81.6%**. The lowest recall occurred on multi-chunk synthesis questions (e.g. Q17, Q18) where information was distributed across 3 or 4 separate source documents, illustrating that $k=3$ is slightly constrained for complex cross-document aggregation.
-- **Latency Breakdown (Figure 2)**: Query latency averaged **18.5 ms** across all questions, with retrieval taking ~12-20 ms and local generation taking < 1 ms.
-- **Overall Quality (Figure 3)**: Context faithfulness averaged **97.0%**, demonstrating strict adherence to retrieved text without hallucination.
+
+**Figure 6: Experimental Evaluation Dashboard (Tab 5: Live Benchmark Metrics & Interactive Table)**
+![Evaluation Dashboard](../reports/figures/screenshots/05_evaluation_dashboard.png)
+
+**Figure 7: Empirical Quality Metrics Across In-Domain Test Queries**
+![Overall RAG Metrics](../reports/figures/overall_rag_metrics.png)
+
+**Figure 8: Retrieval Precision@3 and Recall@3 Breakdown by Tourism Topic**
+![Topic Breakdown](../reports/figures/retrieval_performance_by_topic.png)
+
+**Figure 9: End-to-End Processing Latency Breakdown by Question Category**
+![Latency Breakdown](../reports/figures/latency_breakdown.png)
+
+- **Retrieval Performance (Figure 8)**: In-domain retrieval achieved a mean **Precision@3 of 94.7%** and **Recall@3 of 81.6%**. The lowest recall occurred on multi-chunk synthesis questions (e.g. Q17, Q18) where information was distributed across 3 or 4 separate source documents, illustrating that $k=3$ is slightly constrained for complex cross-document aggregation.
+- **Latency Breakdown (Figure 9)**: Query latency averaged **18.5 ms** across all questions, with retrieval taking ~12-20 ms and local generation taking < 1 ms.
+- **Overall Quality (Figure 7)**: Context faithfulness averaged **97.0%**, demonstrating strict adherence to retrieved text without hallucination. Refusal accuracy on out-of-domain queries was **100.0%**.
 
 ### 4.5 Qualitative Input/Output Examples
 - **Example 1: In-Domain Hallasan Summit Access (Q01)**:

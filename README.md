@@ -18,6 +18,20 @@ The **Jeju Tourism AI Assistant** is a complete, production-grade Retrieval-Augm
 
 Rather than relying purely on an LLM's static parametric memory—which suffers from knowledge cutoffs and hallucinations—this system dynamically queries an external persistent vector database (**ChromaDB**) populated with official tourism documentation. It retrieves the top-$k$ relevant passages, constructs a strictly grounded prompt, and synthesizes accurate, cited answers with sub-20ms latency.
 
+### 🖼️ Application Interface Preview
+
+| Tab 1: Dashboard & Architecture | Tab 2: Document Management |
+| :---: | :---: |
+| ![Dashboard](reports/figures/screenshots/01_dashboard.png) | ![Document Management](reports/figures/screenshots/02_document_management.png) |
+
+| Tab 3: AI Chat Assistant | Tab 4: Retrieval Inspector |
+| :---: | :---: |
+| ![AI Chat Assistant](reports/figures/screenshots/03_chat_assistant.png) | ![Retrieval Inspector](reports/figures/screenshots/04_retrieval_inspector.png) |
+
+| Tab 5: Evaluation & Analytics |
+| :---: |
+| ![Evaluation Dashboard](reports/figures/screenshots/05_evaluation_dashboard.png) |
+
 ---
 
 ## 🏛️ 2. System Architecture
@@ -130,6 +144,12 @@ jeju-tourism-rag/
 │
 ├── reports/
 │   ├── figures/                # High-resolution analytical figures
+│   │   ├── screenshots/        # High-resolution application UI captures
+│   │   │   ├── 01_dashboard.png
+│   │   │   ├── 02_document_management.png
+│   │   │   ├── 03_chat_assistant.png
+│   │   │   ├── 04_retrieval_inspector.png
+│   │   │   └── 05_evaluation_dashboard.png
 │   │   ├── system_architecture_diagram.png
 │   │   ├── overall_rag_metrics.png
 │   │   ├── retrieval_performance_by_topic.png
