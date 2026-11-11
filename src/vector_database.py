@@ -8,6 +8,11 @@ from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 import os
 os.environ["ANONYMIZED_TELEMETRY"] = "False"
+try:
+    import posthog
+    posthog.capture = lambda *args, **kwargs: None
+except Exception:
+    pass
 import chromadb
 from chromadb.config import Settings as ChromaSettings
 from langchain_core.documents import Document
@@ -43,9 +48,12 @@ class VectorDatabaseManager:
 
         self.collection = self.client.get_or_create_collection(
             name=self.collection_name,
-            metadata={"hnsw:space": "cosine"},
+            metadata={
+                "hnsw:space": "cosine",
+                "hnsw:batch_size": 10000,
+                "hnsw:sync_threshold": 10000,
+            },
         )
-        logger.info(f"Connected to collection '{self.collection_name}'. Current count: {self.collection.count()} chunks.")
 
     def add_chunks(self, chunks: List[Document]) -> Dict[str, Any]:
         """
@@ -188,7 +196,10 @@ class VectorDatabaseManager:
         logger.warning(f"Resetting collection '{self.collection_name}'...")
         self.client.delete_collection(self.collection_name)
         self.collection = self.client.get_or_create_collection(
-            name=self.collection_name,
-            metadata={"hnsw:space": "cosine"},
+            metadata={
+                "hnsw:space": "cosine",
+                "hnsw:batch_size": 10000,
+                "hnsw:sync_threshold": 10000,
+            },
         )
         logger.info(f"Collection '{self.collection_name}' has been cleared.")

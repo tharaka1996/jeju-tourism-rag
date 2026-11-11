@@ -108,20 +108,13 @@ jeju-tourism-rag/
 │   └── settings.py             # App configurations, paths, and hyperparameters
 │
 ├── data/
-│   ├── documents/              # Curated Jeju tourism corpus (PDF & TXT)
-│   │   ├── 01_hallasan_national_park.txt
-│   │   ├── 02_seongsan_ilchulbong_unesco.txt
-│   │   ├── 03_manjanggul_lava_tube.txt
-│   │   ├── 04_jeju_beaches_and_coastal_wonders.txt
-│   │   ├── 05_jeju_olle_trail_guide.txt
-│   │   ├── 06_public_transit_and_tourist_buses.txt
-│   │   ├── 07_jeju_culinary_traditions_and_haenyeo.txt
-│   │   ├── 08_traveler_safety_weather_and_facilities.txt
+│   ├── documents/              # Curated expanded Jeju tourism corpus (61 documents: 60 TXT + 1 PDF)
+│   │   ├── 01_hallasan_national_park.txt ... 60_seogwipo_maeil_olle_market.txt
 │   │   └── jeju_official_travel_guide_sample.pdf
 │   └── evaluation/
 │       └── benchmark_questions.json # 22 structured test queries & ground truth
 │
-├── vectorstore/                # Persistent local ChromaDB database directory
+├── vectorstore/                # Persistent local ChromaDB database (267 vector chunks)
 │
 ├── src/
 │   ├── __init__.py
@@ -222,23 +215,23 @@ python src/generate_reports.py
 
 ## 📊 6. Experimental Results Summary
 
-The application was empirically evaluated against **22 structured benchmark questions** categorized into fact retrieval, multi-chunk synthesis, and out-of-domain negative controls:
+The application was empirically evaluated against **22 structured benchmark questions** categorized into fact retrieval, multi-chunk synthesis, and out-of-domain negative controls across the expanded 61-document / 267-chunk database:
 
 | Metric | Measured Score | Academic Interpretation |
 |---|---|---|
-| **In-Domain Precision@3** | **94.7%** | High accuracy in retrieving designated target tourism guides. |
-| **In-Domain Recall@3** | **81.6%** | Comprehensive coverage across relevant source documents. |
-| **Context Faithfulness** | **97.0%** | Strict grounding in retrieved context; zero hallucinated facts. |
-| **Answer Relevance** | **83.8%** | High capture rate of required ground-truth entities. |
+| **In-Domain Precision@3** | **70.2%** | High precision in retrieving designated target tourism guides within top-3 across 61 documents. |
+| **In-Domain Recall@3** | **77.6%** | Strong multi-document coverage across relevant source materials. |
+| **Context Faithfulness** | **96.7%** | Strict grounding in retrieved context; zero hallucinated facts. |
+| **Answer Relevance** | **83.3%** | High capture rate of required ground-truth entities. |
 | **Refusal Accuracy** | **100.0%** | Perfect identification and rejection of non-Jeju questions. |
-| **Mean End-to-End Latency** | **18.5 ms** | Sub-20ms real-time responsiveness on local CPU. |
+| **Mean End-to-End Latency** | **108.1 ms** | Fast sub-120ms real-time responsiveness on local CPU. |
 
 ---
 
 ## 🎓 7. Classroom Demonstration Guide
 
 When demonstrating the project in class to the professor:
-1. **Show the Dashboard Tab**: Highlight the persistent ChromaDB connection, total chunk count (50 chunks), and 384-dimensional embedding model.
+1. **Show the Dashboard Tab**: Highlight the persistent ChromaDB connection, total chunk count (**267 chunks** across **61 documents**), and 384-dimensional embedding model.
 2. **Demonstrate Grounded Question Answering**:
    - *Question 1 (Hallasan)*: *"What are the two trails that reach the Baeknokdam summit of Hallasan, and is reservation required?"*
      - Show the retrieved passages and cited sources (`01_hallasan_national_park.txt`).

@@ -5,9 +5,14 @@ Produces both:
   2. Publication-quality PDF document (via ReportLab)
 Following the professor's 5-chapter academic structure and embedding all figures & UI screenshots.
 """
-
 import sys
 from pathlib import Path
+
+# Configure UTF-8 for console output
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 # Add project root to sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -351,8 +356,13 @@ def generate_docx_report(output_path: Path):
         r.font.name = 'Calibri'
         r.font.size = Pt(9.5)
 
-    doc.save(str(output_path))
-    print(f"Successfully generated Word DOCX report: {output_path}")
+    try:
+        doc.save(str(output_path))
+        print(f"Successfully generated Word DOCX report: {output_path}")
+    except PermissionError:
+        fallback_path = output_path.parent / (output_path.stem + "_updated.docx")
+        doc.save(str(fallback_path))
+        print(f"⚠️ Note: '{output_path.name}' is currently open in Microsoft Word. Saved updated report to: {fallback_path.name}")
 
 
 def generate_pdf_report(output_path: Path):
@@ -590,8 +600,21 @@ def generate_pdf_report(output_path: Path):
     )
     story.append(Paragraph(refs_text, body_style))
 
-    pdf_doc.build(story)
-    print(f"Successfully generated PDF report: {output_path}")
+    try:
+        pdf_doc.build(story)
+        print(f"Successfully generated PDF report: {output_path}")
+    except PermissionError:
+        fallback_path = output_path.parent / (output_path.stem + "_updated.pdf")
+        pdf_doc = SimpleDocTemplate(
+            str(fallback_path),
+            pagesize=letter,
+            rightMargin=46,
+            leftMargin=46,
+            topMargin=46,
+            bottomMargin=46,
+        )
+        pdf_doc.build(story)
+        print(f"⚠️ Note: '{output_path.name}' is currently open in another viewer. Saved updated report to: {fallback_path.name}")
 
 
 if __name__ == "__main__":

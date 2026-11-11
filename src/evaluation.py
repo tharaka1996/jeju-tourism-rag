@@ -4,10 +4,22 @@ Executes benchmark questions against the persistent ChromaDB database,
 computes quantitative retrieval and generation metrics,
 exports results to CSV, and generates analytical figures.
 """
+import sys
+from pathlib import Path
+
+# Set UTF-8 encoding for Windows console
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import json
 import time
 import logging
-from pathlib import Path
 from typing import List, Dict, Any, Tuple
 import pandas as pd
 import numpy as np
@@ -251,3 +263,37 @@ class RAGEvaluator:
 
         logger.info(f"Generated 3 analytical figures in '{settings.FIGURES_DIR}'.")
         return figure_paths
+
+
+if __name__ == "__main__":
+    print("=" * 70, flush=True)
+    print("🚀 RUNNING RAG SYSTEM EVALUATION ON 22 BENCHMARK QUESTIONS", flush=True)
+    print("=" * 70, flush=True)
+
+    evaluator = RAGEvaluator()
+    df = evaluator.run_evaluation()
+
+    factual_df = df[df["Category"] != "out_of_domain"]
+    ood_df = df[df["Category"] == "out_of_domain"]
+
+    print("\n" + "=" * 70, flush=True)
+    print("📊 EVALUATION SUMMARY ACROSS 22 BENCHMARK QUESTIONS", flush=True)
+    print("=" * 70, flush=True)
+    print(f"  • Total Evaluated Questions       : {len(df)} (Factual: {len(factual_df)}, Out-of-Domain: {len(ood_df)})", flush=True)
+    print(f"  • Mean Retrieval Precision@K      : {factual_df['Precision@K'].mean():.4f}", flush=True)
+    print(f"  • Mean Retrieval Recall@K         : {factual_df['Recall@K'].mean():.4f}", flush=True)
+    print(f"  • Mean Answer Faithfulness        : {factual_df['Faithfulness'].mean():.4f}", flush=True)
+    print(f"  • Mean Entity Relevance           : {factual_df['Relevance'].mean():.4f}", flush=True)
+    print(f"  • Out-of-Domain Refusal Accuracy  : {ood_df['Correct_Handling'].mean():.4f}", flush=True)
+    print(f"  • Mean Retrieval Latency          : {df['Retrieval_Time_sec'].mean():.4f}s", flush=True)
+    print(f"  • Mean Generation Latency         : {df['Generation_Time_sec'].mean():.4f}s", flush=True)
+    print(f"  • Mean End-to-End Latency         : {df['Total_Time_sec'].mean():.4f}s", flush=True)
+
+    print("\n🎨 Generating analytical benchmark figures...", flush=True)
+    figs = evaluator.generate_visualizations(df)
+    for fig_path in figs:
+        print(f"  • Saved figure: {fig_path.name}", flush=True)
+
+    print("\n" + "=" * 70, flush=True)
+    print("✅ EVALUATION COMPLETED SUCCESSFULLY!", flush=True)
+    print("=" * 70, flush=True)
